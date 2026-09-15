@@ -20,4 +20,12 @@ router.post('/usuarios', verificaCursos, (req, res) => { //incluir curso
   return res.json(cursos.name);
 });
 
+router.put('/usuarios/:id', (req, res) => { //Atualiozar cursos
+  const { id } = req.params;
+  const { name } = req.body;
+
+  cursos.name[Number(id)] = name;
+  return res.json(cursos.name);
+});
+
 module.exports = router;
