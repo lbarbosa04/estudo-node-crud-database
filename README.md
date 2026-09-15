@@ -55,6 +55,16 @@ npm run dev
 - **function/** — funções auxiliares utilizadas pelas rotas
 - **routes/** — arquivos de rotas (`route.js`) e conexão (`conectando.js`)
 
+## 🧪 Testando a API
+
+Os endpoints da API estão sendo testados utilizando o [Insomnia](https://insomnia.rest/), uma ferramenta de cliente HTTP para testar rotas REST (envio de requisições `GET`, `POST`, `PUT`, `DELETE`, etc.).
+
+Para testar localmente:
+
+1. Instale o [Insomnia](https://insomnia.rest/download)
+2. Inicie o servidor do projeto (`npm run dev`)
+3. Crie as requisições apontando para `http://localhost:PORTA/...` (ajuste a porta conforme configurado no projeto)
+
 ## 🎯 Objetivo
 
 Consolidar os conceitos fundamentais de back-end e me sentir confiante para construir APIs RESTful completas, aplicando o que aprender em projetos reais no futuro.
