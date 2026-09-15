@@ -11,4 +11,17 @@ const verificarCurso = (req, res, next) =>{
     return next();
 }
 
+const verificarCursoId = (req, res, next) => {
+  const { id } = req.params;
+  const index = Number(id);
+  const curso = cursos.name[index];
+
+  if (index < 0 || index >= cursos.name.length || curso === undefined) {
+    return res.status(404).json({ error: 'Curso não encontrado' });
+  }
+
+  req.curso = curso; // guarda pra rota usar depois
+  next();
+}
+
 module.exports = verificarCurso;
