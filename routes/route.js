@@ -1,4 +1,4 @@
-const express = require('express'); //Exportei a biblioteca express para a variavel express
+const express = require('express'); //criei a variavel express e atribui a ela, a biblioteca express
 
 const app = express(); //criei a variavel app e adicionei a biblioteca express
 app.use(express.json());

@@ -1,8 +1,12 @@
 {
-  "name":[
-    "ADS",
-    "matematica",
-    "ciencias"
+  "name":["ADS", "matematica", "ciencias"],
+
+  "_comentarios":[
+  "Para poder adicionar mais alguma informação no JSON preciso apenas fazer da seguinte forma",
+  "Em baixo de name, crio outra propriedade e dentro do array, passo os elementos"
+
   ]
 }
+
+
 

@@ -1,26 +1,34 @@
-const express = require('express'); //"blibioteca"
+const express = require('express'); //criei a variavel e atribui a ela a blibioteca EXPRESS
 
-const router = express.Router(); // crio a variavel com a "blibioteca"
-router.use(express.json());
+const router = express.Router();  //Criei a variavel e atribui a ela a propriedade Router
+router.use(express.json()); //Informo a minha variavel router que ela leia em JSON
 
-const cursos = require('../dados/cursos.json'); // importo os cursos
+const cursos = require('../dados/cursos.json');  //Nessa linha criei a variavel e atribui a ela os cursos.json 
 
-const verificaCursos = require('../function/function');
+const verificaCursos = require('../function/function'); //Atribuo a função a variavel
 
-router.get('/usuarios', (req, res) => { //verificar curso
+router.get('/usuarios', (req, res) => {  //Nessa rota é verificado todos os cursos
   
  return res.json(cursos.name);
 
 });
 
-router.post('/usuarios', verificaCursos, (req, res) => { //incluir curso
+router.get('/usuarios/:id', (req, res) => {  //essa rota posso verificar apenas um curso da posição X
+  const { id } = req.params;
+  const curso = cursos.name[Number(id)];
+
+  return res.json(curso);
+});
+
+
+router.post('/usuarios', verificaCursos, (req, res) => {  //Essa rota utilizo para poder incluir um curso
   const { name } = req.body;
 
   cursos.name.push(name);
   return res.json(cursos.name);
 });
 
-router.put('/usuarios/:id', (req, res) => { //Atualiozar cursos
+router.put('/usuarios/:id', (req, res) => {  //Essa rota serve para atualizar algum curso
   const { id } = req.params;
   const { name } = req.body;
 
@@ -28,4 +36,11 @@ router.put('/usuarios/:id', (req, res) => { //Atualiozar cursos
   return res.json(cursos.name);
 });
 
-module.exports = router;
+router.delete('/usuarios/:id', (req, res) =>{  // Rota utilizada para excluir um curso
+  const{ id } = req.params;
+
+  cursos.name.splice(Number(id), 1); 
+  return res.json(cursos.name)``;
+});
+
+module.exports = router; //Posso exportar o modulo para outro arquivo
