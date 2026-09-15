@@ -1,5 +1,6 @@
 const cursos = require('../dados/cursos.json');
 
+//verifica se o curso já está cadastrado
 const verificarCurso = (req, res, next) =>{
    const {name} = req.body;
 

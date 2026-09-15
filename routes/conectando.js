@@ -1,6 +1,6 @@
-const express = require('express'); //import a blibioteca
+const express = require('express'); //"blibioteca"
 
-const router = express.Router(); // crio a variavel com a blibioteca
+const router = express.Router(); // crio a variavel com a "blibioteca"
 router.use(express.json());
 
 const cursos = require('../dados/cursos.json'); // importo os cursos
@@ -13,7 +13,7 @@ router.get('/usuarios', (req, res) => { //verificar curso
 
 });
 
-router.post('/usuarios', verificaCursos, (req, res) => { //inculir curso
+router.post('/usuarios', verificaCursos, (req, res) => { //incluir curso
   const { name } = req.body;
 
   cursos.name.push(name);
