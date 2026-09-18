@@ -11,7 +11,7 @@ Este projeto possui uma branch separada, criada exclusivamente para **testes**, 
 
 - Evita que erros ou código incompleto afetem a versão principal do projeto.
 - Permite testar novas rotas, middlewares ou lógicas sem medo de "quebrar" o que já está funcionando.
-- Facilita o processo de revisão: só depois que tudo estiver validado, as mudanças são unidas (merge) de volta à `main`.
+- Facilita o processo de revisão: só depois que tudo estiver validado, as mudanças são unidas (merge) de volta à `main/master`.
 
 ## Comandos úteis do Git relacionados
 
@@ -29,13 +29,13 @@ git checkout -b teste
 git branch
 
 # voltar para a branch principal
-git checkout main
+git checkout main/master
 
 # unir as mudanças da branch de teste na main (depois de validado)
-git checkout main
+git checkout main/master
 git merge teste
 ```
 
 ## Observação
 
-Enquanto estiver na branch de testes, qualquer commit feito **não afeta** a branch `main` até que um `merge` seja realizado manualmente.
+Enquanto estiver na branch de testes, qualquer commit feito **não afeta** a branch `main/master` até que um `merge` seja realizado manualmente.
