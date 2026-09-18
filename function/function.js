@@ -1,7 +1,7 @@
 const cursos = require('../dados/cursos.json');
 
 //verifica se o curso já está cadastrado
-const verificarCurso = (req, res, next) =>{
+const verificarCursoCadastrado = (req, res, next) =>{
    const {name} = req.body;
 
    if(cursos.name.includes(name)){
@@ -9,7 +9,7 @@ const verificarCurso = (req, res, next) =>{
    }
 
     return next();
-}
+};
 
 const verificarCursoId = (req, res, next) => {
   const { id } = req.params;
@@ -24,4 +24,4 @@ const verificarCursoId = (req, res, next) => {
   next();
 }
 
-module.exports = verificarCurso;
+module.exports = { verificarCursoCadastrado, verificarCursoId };
