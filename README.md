@@ -1,41 +1,74 @@
-# Branch de testes
+# 🚀 Estudos de CRUD com Node.js
 
-Este projeto possui uma branch separada, criada exclusivamente para **testes**, sem afetar o código principal.
+Este repositório documenta minha jornada de aprendizado construindo operações **CRUD** (Create, Read, Update, Delete) utilizando **Node.js**, **npm** e **Express**.
 
-## Estrutura de branches
+## 📌 Sobre o projeto
 
-- **`main`** (ou `master`) → código principal, estável, em produção.
-- **`teste`** (ou o nome que você deu à branch) → branch usada para experimentar mudanças, testar novas funcionalidades ou correções antes de aplicá-las na branch principal.
+Estou começando agora nos estudos de back-end e este repositório vai reunir meus experimentos, anotações e códigos enquanto aprendo a criar APIs simples e funcionais.
 
-## Por que usar uma branch de testes?
+A ideia é evoluir aos poucos:
 
-- Evita que erros ou código incompleto afetem a versão principal do projeto.
-- Permite testar novas rotas, middlewares ou lógicas sem medo de "quebrar" o que já está funcionando.
-- Facilita o processo de revisão: só depois que tudo estiver validado, as mudanças são unidas (merge) de volta à `main/master`.
+- [ ] Entender o básico do Node.js
+- [ ] Criar um servidor com Express
+- [ ] Implementar rotas de **Create** (criar dados)
+- [ ] Implementar rotas de **Read** (listar/buscar dados)
+- [ ] Implementar rotas de **Update** (atualizar dados)
+- [ ] Implementar rotas de **Delete** (remover dados)
+- [ ] Conectar a um banco de dados (proximo passo)
+- [ ] Aplicar boas práticas (validações, tratamento de erros, etc.)
 
-## Comandos úteis do Git relacionados
+## 🛠️ Tecnologias utilizadas
+
+- [Node.js](https://nodejs.org/) — ambiente de execução JavaScript no back-end
+- [npm](https://www.npmjs.com/) — gerenciador de pacotes
+- [Express](https://expressjs.com/) — framework web para Node.js
+
+## ▶️ Como rodar o projeto
 
 ```bash
-# criar uma nova branch a partir da atual
-git branch teste
+# Clone o repositório
+git clone https://github.com/lbarbosa04/estudo-node-crud-database.git
 
-# trocar para a branch de teste
-git checkout teste
-
-# criar e já mudar para a branch em um único comando
-git checkout -b teste
-
-# ver todas as branches existentes
-git branch
-
-# voltar para a branch principal
-git checkout main/master
-
-# unir as mudanças da branch de teste na main (depois de validado)
-git checkout main/master
-git merge teste
+# Inicie o servidor
+npm run dev
 ```
 
-## Observação
+## 📂 Estrutura do projeto
 
-Enquanto estiver na branch de testes, qualquer commit feito **não afeta** a branch `main/master` até que um `merge` seja realizado manualmente.
+```
+📦 crude
+├── 📁 dados
+│   └── 📄 cursos.json
+├── 📁 function
+│   └── 📄 function.js
+├── 📁 node_modules
+├── 📁 routes
+│   ├── 📄 conectando.js
+│   └── 📄 route.js
+├── 📄 .gitignore
+├── 📄 package.json
+├── 📄 package-lock.json
+└── 📄 README.md
+```
+
+- **dados/** — arquivo `cursos.json` usado como base de dados para os testes de CRUD
+- **function/** — funções auxiliares utilizadas pelas rotas
+- **routes/** — arquivos de rotas (`route.js`) e conexão (`conectando.js`)
+
+## 🧪 Testando a API
+
+Os endpoints da API estão sendo testados utilizando o [Insomnia](https://insomnia.rest/), uma ferramenta de cliente HTTP para testar rotas REST (envio de requisições `GET`, `POST`, `PUT`, `DELETE`, etc.).
+
+Para testar localmente:
+
+1. Instale o [Insomnia](https://insomnia.rest/download)
+2. Inicie o servidor do projeto (`npm run dev`)
+3. Crie as requisições apontando para `http://localhost:PORTA/...` (ajuste a porta conforme configurado no projeto)
+
+## 🎯 Objetivo
+
+Consolidar os conceitos fundamentais de back-end e me sentir confiante para construir APIs RESTful completas, aplicando o que aprender em projetos reais no futuro.
+
+## 📚 Status
+
+🟡 **Em andamento** — estudos de desenvolvimento back-end iniciados.
