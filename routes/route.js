@@ -5,7 +5,9 @@ app.use(express.json());
 
 const port = 3000; //porta que eu estou utilizando
 
-const rotas = require('./conectando'); //importei as rotas do meu arquivo conectando.js
+const rotas = require('./rotasApp'); //importei as rotas do meu arquivo conectando.js
+
+rotas(app); 
 
 app.listen(port, (error) => {  //Servidor rodando
 
@@ -16,7 +18,3 @@ app.listen(port, (error) => {  //Servidor rodando
 
     console.log(`O servidor está rodando na porta ${port}`);
 });
-
-app.use(rotas); //aqui informo para o route.js que posso usar as rotas do conectando.js
-
-
