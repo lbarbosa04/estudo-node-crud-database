@@ -39,11 +39,10 @@ npm run dev
 📦 crude
 ├── 📁 dados
 │   └── 📄 cursos.json
-├── 📁 function
-│   └── 📄 function.js
 ├── 📁 node_modules
 ├── 📁 routes
 │   ├── 📄 conectando.js
+    ├── 📄 rotasApp.js
 │   └── 📄 route.js
 ├── 📄 .gitignore
 ├── 📄 package.json
