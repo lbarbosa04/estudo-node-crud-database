@@ -13,7 +13,7 @@ router.get('/cursos/:id', (req, res) => { //Nessa rota mostro os cursos um por v
   const curso = cursos.name[Number(id)]; //Com o id vou ate os cursos vejo a posição e mostro o curso salvo
 
   if(!curso){  //se não tiver o curso mostra o erro 
-    return res.status(404).json({ error: 'Curso não encontrado!' });
+    return res.status(404).json({ error: 'Curso não e!' });
   }
 
   return res.json(curso);
