@@ -2,6 +2,3 @@ node_modules
 info.txt
 /generated/prisma
 .env
-.agents
-.claude
-.windsurf

@@ -11,11 +11,17 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@prisma/client": "^7.10.0",
+    "@prisma/client": "^6.19.3",
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
     "nodemon": "^3.1.14",
-    "prisma": "^7.10.0"
+    "prisma": "^6.19.3"
+  },
+  "allowScripts": {
+    "@prisma/client@6.19.3": true,
+    "@prisma/engines@6.19.3": true,
+    "prisma@6.19.3": true
   }
 }
