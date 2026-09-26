@@ -42,7 +42,7 @@ npm run dev
 ├── 📁 node_modules
 ├── 📁 routes
 │   ├── 📄 conectando.js
-    ├── 📄 rotasApp.js
+|   ├── 📄 rotasApp.js
 │   └── 📄 route.js
 ├── 📄 .gitignore
 ├── 📄 package.json
